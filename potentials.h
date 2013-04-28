@@ -1,0 +1,10 @@
+#define VFunc(x,y)      1.105841285077843+x*x*(-2.+x*(-0.1+x))+y*y
+#define VxFunc(x,y)      x*(-4.+x*(-0.3+4.*x))
+#define VyFunc(x,y)      2.*y
+#define VxxFunc(x,y)      -4.+x*(-0.6+12.*x)
+#define VxyFunc(x,y)      0
+#define VyyFunc(x,y)      2.
+#define VxxxFunc(x,y)      -0.6+24.*x
+#define VxxyFunc(x,y)      0
+#define VxyyFunc(x,y)      0
+#define VyyyFunc(x,y)      0

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# delete the mean and the covariance matrix bit if it exists in the input file
+#cat inputPos.txt |awk {'print $1 " " $2'} >> TempinputPos.txt
+#rm inputPos.txt
+#mv TempinputPos.txt inputPos.txt
+
+#make clean and make again with -march compiler options
+make clean
+make
+
+#export a random number for the RNG seed
+export GSL_RNG_SEED=$(head -1 /dev/urandom |od -N 10 |awk '{print $2}') 
+
+#run the executable with the input file
+./TwoDim inputPos.dat >out
